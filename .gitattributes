@@ -1,0 +1,7 @@
+material_0.png filter=lfs diff=lfs merge=lfs -text
+[submodule "gs2D_engine/submodules/diff-surfel-rasterization"]
+	path = gs2D_engine/submodules/diff-surfel-rasterization
+	url = https://github.com/hbb1/diff-surfel-rasterization.git
+[submodule "gs2D_engine/submodules/simple-knn"]
+	path = gs2D_engine/submodules/simple-knn
+	url = https://gitlab.inria.fr/bkerbl/simple-knn.git

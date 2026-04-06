@@ -1,0 +1,16 @@
+{
+    "pathMetadata" : "configs/Livecams-Masterarbeit-Timo-Kleger.csv",
+    "pathScene" : "data/2024-10-09/12-00-00/",
+    "fileTransformMatrix" : "data/transformation_matrices/Rshot/transformation_final_v3.json",
+    "hash" : 0,
+    "nbr_frames": 6,
+    "overlapPix_wid_img": 40,
+    "degPerPix_wid_img": 0.05625,
+    "camera_angle_wid_img": 1.05,
+    "camera_angle_hei": 0.79,
+    "cx": 500,
+    "cy": 500,
+    "wid": 3072,
+    "hei": 2048,
+    "origin_point": [[7.6, 46.4], [8.35, 46.4], [8.35, 46.85], [7.6, 46.85]]
+}

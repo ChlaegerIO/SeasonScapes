@@ -1,0 +1,20 @@
+{
+  "name": "stable diffusion v1.5",
+  "sd_model_path": "./controlNet_engine/models/cldm_v15_depth.yaml",
+  "control_model_path": "./controlNet_engine/models/control_sd15_r1Sd.ckpt",
+  "a_prompt": "best quality, extremely detailed",
+  "n_prompt": "longbody, lowres, bad anatomy, bad hands, missing fingers, extra digit, fewer digits, cropped, worst quality, low quality",
+  "num_samples": 1,
+  "image_resolution": 512,
+  "detect_resolution": 384,
+  "ddim_steps": 50,
+  "guess_mode": false,
+  "strength": 1.0,
+  "scale": 4.9,
+  "seed": 1797625314,
+  "eta": 0,
+  "calcDepth": false,
+  "control_img_folder": "./controlNet_engine/training/r1SceneDepth/source",
+  "save_folder": "./data/2024-10-09/12-00-00/imagesPlane_r1Sd_good",
+  "transformMatrix_path": "./data/transformation_matrices/Rshot/transformation_final_v4_flat.json"
+}

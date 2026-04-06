@@ -1,0 +1,79 @@
+dataset:
+  cam_config_path: configs/Cam_-8512.json
+  gee_config_path: configs/EarthEngine/Scale60_-8512_LaubH_v2.json
+  sat_config_path: configs/SatCloud_Kachelmann_superHD.json
+  sd_config_path: configs/sd15.json
+  fileTransformMatrix: data/transformation_matrices/GRIND/transforms_knownLaubH_2_250119-1200.json
+diffusion:
+  a_prompt: best quality, extremely detailed
+  calcDepth: false
+  ddim_steps: 50
+  detect_resolution: 384
+  eta: 0
+  guess_mode: false
+  image_resolution: 512
+  inpaint:
+    sd_model_key: runwayml/stable-diffusion-v1-5
+    ip_adapter_image_path: './data/2025-01-19/12-00-00/imagesPlane/52_12-JUNGFSHREK_2.jpg'
+    prompt: 'Landscape with snow and mountains on a cloudy day in winter'
+    controlnet_units:
+    - condition_image_path: ''
+      controlnet_key: lllyasviel/control_v11f1p_sd15_depth    # path to own model: ./controlNet_engine/models/control_sd15_r1Sd.ckpt or lllyasviel/control_v11f1p_sd15_depth
+      preprocessor: none
+      weight: 1.5
+    - condition_image_path: ''
+      controlnet_key: lllyasviel/control_v11p_sd15_inpaint
+      preprocessor: inpaint_global_harmonious
+      weight: 0.5
+    denoising_strength: 1.0
+    guidance_scale: 2.9
+    height: 1024
+    width: 1536
+    image_path: ''
+    mask_path: ''
+    negative_prompt: longbody, lowres, bad anatomy, bad hands, missing fingers, extra digit, fewer digits, cropped, worst quality, low quality, dark, shadow, oversaturated
+    num_images_per_prompt: 1
+    num_inference_steps: 50
+    seed: 0
+    dilate_kernel: 2
+  n_prompt: longbody, lowres, bad anatomy, bad hands, missing fingers, extra digit, fewer digits, cropped, worst quality, low quality
+  name: stable diffusion v1.5
+  num_samples: 1
+  scale: 4.9
+  seed: 1797625314
+  strength: 1.0
+  transformMatrix_eval_path: ./data/transformation_matrices/GRIND/transforms_novelLaubH_wayp_3.json
+  transformMatrix_novel_path: ./data/transformation_matrices/GRIND/transforms_novelLaubH_wayp_3.json
+  transformMatrix_metrics_path: ./data/transformation_matrices/GRIND/transforms_eval.json
+log:
+  cache_path: paint_engine/cache
+  exp_path: paint_engine/Logs/GRIND/LaubH_wayp3_v4_250119-1200
+  only_paint: false
+optim:
+  lr: 0.01
+  seed: 0
+  train_step: 200
+render:
+  calcu_uncolored_mode: DIFF    # WarpGrid, FACE_ID, DIFF
+  force_run_xatlas: false
+  height: 2048
+  width: 3072
+  initial_texture_path: null
+  render_angle_thres: 140   # [0, 180]
+  texture_default_color:
+  - 1.0
+  - 0.0
+  - 0.0
+  texture_interpolation_mode: bilinear    # nearest, bilinear, bicubic
+  texture_resolution:
+  - 2048
+  - 3072
+  scale_img: 0.5              # height/width * scale_img
+  use_depth_mask: true
+  depth_estimation: "midas"   # "midas", "depthAny_v2" for painting masking
+  depth_filter_boundaries:
+  - 0.2                       # [0, 1] minimum depth for painting masking
+  - 0.7                       # [0, 1] maximum depth
+  batch_size_internal: 20000  # only for own rasterizer
+  filter_background: 1.2      # [0, 3]
+  mask_sky: false

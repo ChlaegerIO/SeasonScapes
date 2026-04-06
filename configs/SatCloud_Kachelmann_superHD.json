@@ -1,0 +1,14 @@
+{
+  "name": "Kachelmann_superHD",
+  "satelliteMeta_path": "data/EarthEngine/satelliteMeta",
+  "cloudThresh": 110,
+  "cropLon_min": 127,
+  "cropLon_max": 673,
+  "cropLat_min": 79,
+  "cropLat_max": 561,
+  "delta_vTemp": -0.5757575757575758,
+  "null_vTemp": 55.36,
+  "delta_tempH": -150.0,
+  "null_tempH": 2500,
+  "avg_cloudHeight": 500
+}

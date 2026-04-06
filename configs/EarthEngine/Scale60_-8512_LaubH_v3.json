@@ -1,0 +1,57 @@
+{
+  "save_path": "data/EarthEngine/",
+  "mesh_path": "data/EarthEngine/mesh_-8512_LaubH_v3.ply",
+  "hash": -8512605811660725660,
+  "dem_min_m": 0,
+  "dem_max_m": 4500,
+  "dem_save_mode": "I;16",
+  "dem_opacity": 0.8,
+  "land_min": 0.0,
+  "land_max": 0.6,
+  "land_min_ui": 0,
+  "land_max_ui": 190,
+  "land_gamma": 1.2,
+  "land_cloud_fill_max": 10,
+  "land_sun_elev": 30,
+  "dem_model": "NASA30m",
+  "land_model": "swissT10cm",
+  "pxScale": 60,
+  "color_correction": false,
+  "aoi": [
+    [
+      7.6,
+      46.4
+    ],
+    [
+      8.35,
+      46.4
+    ],
+    [
+      8.35,
+      46.85
+    ],
+    [
+      7.6,
+      46.85
+    ]
+  ],
+  "aoi_pixel": [
+    [
+      0,
+      0
+    ],
+    [
+      1393,
+      0
+    ],
+    [
+      1393,
+      836
+    ],
+    [
+      0,
+      836
+    ]
+  ],
+  "save_fName": "Scale60_-8512_LaubH_v3.json"
+}
