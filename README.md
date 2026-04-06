@@ -21,13 +21,13 @@ The codebase has 3 main components:
 
 1. A `data_engine` to 
    - download datasets (Google Earth data, Roundshot webcam data - Roundshot downlaods are limited for an IP address -> use dataset from huggingface instead),
-   - preprocess and visualize the dataset, 
-   - a 3D-to-2D point matching tool and 
-   - pose optimization training
-2. A `paint_engine` with a 3D mesh texturing pipeline to paint and inpaint a 3D mesh
+   - preprocess and visualize the dataset (sec3.2), 
+   - a 3D-to-2D point matching tool (sec3.3) and 
+   - pose optimization training (sec3.3)
+2. A `paint_engine` with a 3D mesh texturing pipeline to paint and inpaint a 3D mesh and render images for Gaussian Splatting (sec3.4 - 3.6)
 3. An `eval_engine` to evaluate the results (PSNR, SSIM and LPIPS)
 
-![paper_diagrams](https://github.com/user-attachments/assets/05998822-38e8-49a2-b8b0-ca1e62645b0b)
+<img width="4072" height="2181" alt="main_graph" src="https://github.com/user-attachments/assets/77864463-e9a3-4a84-8adb-b176c6dd2395" />
 
 
 ## How to run experiments
